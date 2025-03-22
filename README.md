@@ -1,11 +1,12 @@
 
 
-<h1 style="font-size: 155 pt;" align=center><strong>Lessons Learned from a Unifying Empirical Study of Parameter-Efficient Fine Tuning (PEFT) in Visual Recognition</strong></h2>
+<h1 style="font-size: 155 pt;" align=center><strong>Lessons Learned from a Unifying Empirical Study of Parameter-Efficient Fine Tuning (PEFT) in Visual Recognition (CVPR2025)</strong></h2>
 
-Parameter-efficient fine tuning (PEFT) has attracted significant attention lately, due to the increasing size of pre-trained models and the need to fine-tune them for superior downstream performance. This community-wide enthusiasm has
-sparked a plethora of approaches. We conduct a unifying empirical study of 14 representative PEFT approaches in the context of Vision Transformers (ViT).
+Parameter-efficient fine tuning (PEFT) has attracted significant attention lately due to the increasing size of pre-trained models and the need to fine-tune them for superior downstream performance. This community-wide enthusiasm has
+sparked a plethora of approaches. We provide a systematic and comprehensive code base implementing 16 PETL methods, which serves as a valuable resource for researchers and enables **consistent and reproducible evaluations** of PEFT methods. We conduct a unifying empirical study of 16 representative PEFT approaches in **various scenarios**, including low shots, many shots, different domain gaps, and robustness between in-distribution and OOD. Our findings offer several insightful directions for future research, including **leveraging prediction differences** in other learning paradigms such as semi-supervised learning and domain adaptation, **robust fine-tuning with PEFT**,  providing **empirical evidence for PEFT mechanism understanding**
+More details can be found in [our paper](https://arxiv.org/pdf/2409.16434). 
 
-We systematically tune their hyper-parameters to fairly compare their accuracy on downstream tasks. Our study not only offers a valuable user guide but also unveils several new insights. More details can be found in [our paper](https://arxiv.org/pdf/2409.16434). 
+----------------------------------------------------
 
 This code base contains the following features:
 1.  [Evaluate a PEFT method on one dataset with selected hyper-parameters](#evaluate-a-peft-method-on-one-dataset-in-vtab-1k)

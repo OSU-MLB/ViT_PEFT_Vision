@@ -3,7 +3,7 @@
 <h1 style="font-size: 155 pt;" align=center><strong>Lessons Learned from a Unifying Empirical Study of Parameter-Efficient Fine Tuning (PEFT) in Visual Recognition (CVPR2025)</strong></h2>
 <div align="center">
 
-:book: [Paper](https://arxiv.org/abs/2409.16434) | :clipboard: [Project page](https://raptormai.github.io/PEFT_Vision_CVPR25/)
+:book: [Paper](https://arxiv.org/abs/2409.16434) | :clipboard: [Project page](https://zheda-mai.github.io/PEFT_Vision_CVPR25/)
 
 </div>
 

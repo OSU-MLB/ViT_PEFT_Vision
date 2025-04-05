@@ -1,6 +1,6 @@
 
 
-<h1 style="font-size: 120 pt;" align=center><strong>Lessons and Insights from a Unifying Study of Parameter-Efficient Fine-Tuning (PEFT) in Visual Recognition</strong></h1>
+<h1 style="font-size: 100 pt;" align=center><strong>Lessons and Insights from a Unifying Study of Parameter-Efficient Fine-Tuning (PEFT) in Visual Recognition</strong></h1>
 <h2 align=center style="color:blue;font-size: 120 pt"> CVPR'25 (Highlight) </h2>
 <div align="center">
 

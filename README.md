@@ -1,6 +1,7 @@
 
 
-<h1 style="font-size: 155 pt;" align=center><strong>Lessons and Insights from a Unifying Study of Parameter-Efficient Fine-Tuning (PEFT) in Visual Recognition (CVPR2025)</strong></h2>
+<h1 style="font-size: 140 pt;" align=center><strong>Lessons and Insights from a Unifying Study of Parameter-Efficient Fine-Tuning (PEFT) in Visual Recognition</strong></h1>
+<h2 align=center style="color:blue;font-size: 120 pt"> CVPR'25 (Highlight) </h2>
 <div align="center">
 
 :book: [Paper](https://arxiv.org/abs/2409.16434) | :clipboard: [Project page](https://zheda-mai.github.io/PEFT_Vision_CVPR25/)

@@ -226,7 +226,9 @@ We use the CLIP ViT-B/16 model and add an FC layer as the prediction head with z
 
 The code to generate the prediction head for CLIP can be found at [build_clip_zs_classifier.py](experiment/build_clip_zs_classifier.py).  
 
-This is an example command to run a PEFT method (LoRA with dimnsion 32) for the 100-shot ImageNet dataset:
+**Fine-tuning CLIP on downstream data.** 
+
+This is an example command to run a PEFT method (LoRA with dimension 32) for the 100-shot ImageNet dataset:
 ```bash
 CUDA_VISIBLE_DEVICES=0  python main.py --data fs-imagenet --data_path data_folder/imagenet/images --warmup_lr_init 1.0e-7 --lr 0.00003 --wd 0.005 --eval_freq 1 --store_ckp --lora_bottleneck 32  --batch_size 256 --final_acc_hp --early_patience 10
 ```
@@ -240,6 +242,7 @@ do
     done
 done
 ```
+**Evaluation fine-tuned CLIP on OOD data.**
 
 To evaluate the performance of fine-tuned models on OOD data, here is an example command:
 ```bash  
@@ -252,9 +255,11 @@ do
 done
 ```  
 
+**Weight-Space Ensembles (WiSE) for PEFT.**
+
 When it comes to applying WiSE to PEFT methods, there are two types of PEFT methods. 
 - Methods that insert additional parameters to the model, such as Adapter.
--  Methods that directly fine-tuned existing parameters, such as BitFit. 
+-  Methods that directly fine-tune existing parameters, such as BitFit. 
 
 For the former, we use `merge_petl.py` and use `merge_model.py` for the latter. 
 
@@ -304,17 +309,17 @@ If you use this paper/code in your research, please consider citing us:
 ```
 
 
-## Reference:
-- SSF: https://github.com/dongzelian/SSF  
-- Adaptformer: https://github.com/ShoufaChen/AdaptFormer  
-- ConvPass: https://github.com/JieShibo/PETL-ViT  
-- LoRA: https://github.com/ZhangYuanhan-AI/NOAH  
-- Adapter: https://github.com/ZhangYuanhan-AI/NOAH, https://arxiv.org/pdf/2007.07779.pdf, https://arxiv.org/pdf/1902.00751.pdf 
-- VPT: https://github.com/KMnP/vpt  
-- FacT: https://github.com/JieShibo/PETL-ViT  
-- RepAdpater: https://github.com/luogen1996/RepAdapter
-- VQT: https://openaccess.thecvf.com/content/CVPR2023/papers/Tu_Visual_Query_Tuning_Towards_Effective_Usage_of_Intermediate_Representations_for_CVPR_2023_paper.pdf
-- BitFit: https://arxiv.org/pdf/2106.10199.pdf  
-- DiffFit: https://arxiv.org/pdf/2304.06648.pd
+## References:
+- [SSF](https://github.com/dongzelian/SSF)  
+- [AdaptFormer](https://github.com/ShoufaChen/AdaptFormer)  
+- [ConvPass](https://github.com/JieShibo/PETL-ViT)  
+- [LoRA](https://github.com/ZhangYuanhan-AI/NOAH)  
+- [Adapter (GitHub)](https://github.com/ZhangYuanhan-AI/NOAH), [Adapter (Pfeiffer et al., 2020)](https://arxiv.org/pdf/2007.07779.pdf), [Adapter (Houlsby et al., 2019)](https://arxiv.org/pdf/1902.00751.pdf)  
+- [VPT](https://github.com/KMnP/vpt)  
+- [FacT](https://github.com/JieShibo/PETL-ViT)  
+- [RepAdapter](https://github.com/luogen1996/RepAdapter)  
+- [VQT](https://openaccess.thecvf.com/content/CVPR2023/papers/Tu_Visual_Query_Tuning_Towards_Effective_Usage_of_Intermediate_Representations_for_CVPR_2023_paper.pdf)  
+- [BitFit](https://arxiv.org/pdf/2106.10199.pdf)  
+- [DiffFit](https://arxiv.org/pdf/2304.06648.pdf)  
 
 

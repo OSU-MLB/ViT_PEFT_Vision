@@ -151,7 +151,7 @@ class BlockPETL(nn.Module):
                 x_original = self.drop_path2(self.ls2(self.mlp(x_norm2, idx)))
                 x_ft_mlp = self.drop_path2(self.ls2(self.ft_mlp_module(x_original, add_residual=True)))
                 del x_original
-            elif self.params.ft_attn_mode == 'sequential_before':
+            elif self.params.ft_mlp_mode == 'sequential_before':
                 x_ft_mlp = self.drop_path2(self.ls2(self.mlp(self.ft_mlp_module(x_norm2), idx)))
             else:
                 raise NotImplementedError
